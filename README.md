@@ -2,8 +2,8 @@
 
 ## Environments
 
-- Preview: https://main--xsc-wknd-commerce--hlxsites.hlx.page/
-- Live: https://main--xsc-wknd-commerce--hlxsites.hlx.live/
+- Preview: https://main--motilaloswal--sherest.hlx.page/
+- Live: https://main--motilaloswal--sherest.hlx.live/
 
 ## Pre-requisites
 
