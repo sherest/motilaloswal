@@ -17,6 +17,10 @@ body {
 
     &:not(.modern-nav)>main {
         margin-top: 60px;
+
+        &:not(.blog) {
+            margin-top: 130px;
+        }
     }
 }
 
