@@ -182,7 +182,7 @@ export default async function decorate(block) {
     });
   }
 
-  if (languages?.data) {
+  if (languages?.data && languages?.data?.length > 0) {
     // Create the select element
     const languageSelector = document.createElement('select');
     languageSelector.id = 'language-selector';

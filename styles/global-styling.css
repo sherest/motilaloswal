@@ -292,6 +292,7 @@ footer {
 
     .footer {
         max-width: unset !important;
+        height: unset !important;
 
         & .wrapper {
             display: block;
@@ -397,6 +398,9 @@ footer {
                 .icon {
                     filter: invert(1);
                 }
+
+                display: flex;
+                gap: 20px;
             }
             & > div:nth-child(2) {
                 display: flex;
