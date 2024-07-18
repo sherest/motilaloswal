@@ -1,0 +1,73 @@
+.indices.block {
+    display: none;
+}
+
+.indices-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.indices-clone {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 10px 30px 0px rgba(112, 144, 176, 0.15);
+    padding: 24px;
+    /* flex: 0 0 44%; */
+    margin-right: inherit;
+    margin-left: inherit;
+    margin-bottom: 24px;
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.indices-content-0,
+.indices-content-2 {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        color: #454B54;
+        line-height: 20px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        color: #8A93A0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        margin-top: 6px;
+    }
+}
+
+.indices-content-1 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    .icon {
+        width: auto;
+    }
+}
+
+.indices-content-2 {
+    &>div:first-of-type {
+        color: #454B54;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    & div:nth-of-type(2) {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        margin-right: 4px;
+        color: #049C2E;
+    }
+}
