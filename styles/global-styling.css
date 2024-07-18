@@ -560,16 +560,46 @@ header nav .nav-sections.motilal-right-nav ul>li:first-of-type>a {
 }
 
 .section.inner-container {
-    width: 1250px;
-    max-width: 1250px;
+    max-width: 1250px !important;
     margin: auto;
 }
 
 .columns.columns-type-a {
+    &>div {
+        justify-content: space-evenly;
+    }
+
     & h2 {
         font-size: 38px;
         color: white;
         font-weight: 600;
+    }
+
+    & .type-a-1 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        &>div {
+            flex: 0 0 18%;
+            border-radius: 10px;
+            border: 1.5px solid #292929;
+            background: linear-gradient(133deg, #1D1E20 0%, #040404 62.28%, #18191B 97.19%);
+            box-shadow: 0px 20px 50px 0px rgba(49, 49, 49, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            padding: 40px 10px;
+
+            & p {
+                margin: 0;
+                padding: 0;
+                font-size: 18px;
+                color: #BBBBBB;
+                line-height: 1.5em;
+            }
+        }
     }
 
     @media (width >=900px) {
@@ -584,4 +614,51 @@ header nav .nav-sections.motilal-right-nav ul>li:first-of-type>a {
         justify-content: center;
     }
 
+    a.button {
+        min-width: 200px;
+        width: auto;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 4px;
+        background: linear-gradient(144deg, #FFD200 40.85%, #F7971E 98.66%);
+        color: #000;
+    }
+
+    a.button:hover {
+        text-decoration: none;
+        color: #000;
+    }
+
+}
+
+body::-webkit-scrollbar {
+    width: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FCAF17;
+    outline: 1px solid slategrey;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.section.inner-container {
+    .default-content-wrapper {
+       display: flex;
+       justify-content: center;
+        h2 {
+            font-size: 38px;
+            color: white;
+            font-weight: 600;
+        }
+
+        h2::after {
+            content: none;
+        }
+    }
 }
