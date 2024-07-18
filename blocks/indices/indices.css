@@ -5,6 +5,7 @@
 .indices-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .indices-clone {
@@ -17,13 +18,13 @@
     margin-left: inherit;
     margin-bottom: 24px;
     flex: 0 0 auto;
-    width: 25%;
 }
 
 .indices-content-0,
 .indices-content-2 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     h2 {
         color: #454B54;

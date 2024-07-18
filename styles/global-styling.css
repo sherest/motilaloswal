@@ -543,6 +543,10 @@ footer {
 
 }
 
+.motilal-oswal-white .header .header-nav-wrapper {
+    padding: 0;
+}
+
 .motilal-oswal .section.nav-brand {
     padding: 0;
 }
@@ -827,7 +831,8 @@ body::-webkit-scrollbar-track {
         border: 1.5px solid #292929;
         background: linear-gradient(133deg, #1D1E20 0%, #040404 62.28%, #18191B 97.19%);
         box-shadow: 0px 20px 50px 0px rgba(49, 49, 49, 0.05);
-        p{
+
+        p {
             margin: 0;
             padding: 0;
         }
@@ -842,12 +847,13 @@ body::-webkit-scrollbar-track {
         transform: rotate(90deg);
         border: none;
     }
-    details[open] .accordion-item-body{
+
+    details[open] .accordion-item-body {
         background-color: transparent;
     }
-    
+
 }
 
-.motilal-oswal-white{
+.motilal-oswal-white {
     background: #FAFAFA;
 }
