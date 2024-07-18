@@ -5,6 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.5em;
+    font-size: 14px;
 }
 
 body>header {
@@ -845,4 +846,8 @@ body::-webkit-scrollbar-track {
         background-color: transparent;
     }
     
+}
+
+.motilal-oswal-white{
+    background: #FAFAFA;
 }
