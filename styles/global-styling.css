@@ -522,6 +522,23 @@ footer {
 
             }
         }
+        @media (width<=760px) {
+            &{
+                height: 500px;
+            }    
+            .hero-desc-wrapper {
+                & h1{
+                    font-size: 46px;
+                }
+                & p{
+                    font-size: 18px;
+                }
+                & a.button-primary {
+                    font-size: 14px;
+                }
+            }
+        }
+
     }
 }
 
@@ -570,7 +587,10 @@ header nav .nav-sections.motilal-right-nav ul>li:first-of-type>a {
 
 .columns.columns-type-a {
     &>div {
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+
     }
 
     & h2 {
@@ -584,7 +604,7 @@ header nav .nav-sections.motilal-right-nav ul>li:first-of-type>a {
         margin-bottom: 40px;
 
         &>div {
-            flex: 0 0 18%;
+            flex: 0 0 40%;
             border-radius: 10px;
             border: 1.5px solid #292929;
             background: linear-gradient(133deg, #1D1E20 0%, #040404 62.28%, #18191B 97.19%);
@@ -595,7 +615,13 @@ header nav .nav-sections.motilal-right-nav ul>li:first-of-type>a {
             gap: 20px;
             text-align: center;
             padding: 40px 10px;
+            margin-bottom: 30px;
 
+            @media (width >=900px) {
+                &{
+                    flex: 0 0 18%;
+                }
+            }
             & p {
                 margin: 0;
                 padding: 0;
@@ -694,8 +720,16 @@ body::-webkit-scrollbar-track {
     display: flex;
     flex-direction: row-reverse;
 
+    @media (width<=1024px) {
+        & {
+            flex-direction: column-reverse;
+        }
+    }
+
     .content-type-a {
-        width: 50%;
+        
+        margin-left: auto;
+        margin-right: auto;
 
         &>div {
             min-width: 450px;
@@ -707,6 +741,19 @@ body::-webkit-scrollbar-track {
             background: linear-gradient(133deg, #1D1E20 0%, #040404 62.28%, #18191B 97.19%);
             box-shadow: 0px 20px 50px 0px rgba(49, 49, 49, 0.05);
             padding: 15px 20px;
+        }
+
+        @media (width <=768px) {
+            &>div {
+                min-width: 300px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (width >768px) {
+            & {
+                width: 50%;
+            }
         }
 
         & h3 {
@@ -729,7 +776,14 @@ body::-webkit-scrollbar-track {
     }
 
     .content-type-b {
-        width: 50%;
+        @media (width >768px) {
+            & {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto
+            }
+        }
+        
 
         & .icon {
             height: 444px;
@@ -781,6 +835,7 @@ body::-webkit-scrollbar-track {
         background: linear-gradient(133deg, #1D1E20 0%, #040404 62.28%, #18191B 97.19%);
         box-shadow: 0px 20px 50px 0px rgba(49, 49, 49, 0.05);
         padding: 15px 30px 30px;
+        margin-bottom: 20px;
     }
 
     &>div:nth-of-type(2) {
@@ -860,9 +915,9 @@ body::-webkit-scrollbar-track {
     background: #FAFAFA;
 }
 
-.section.inner-container.news-section{
-    .default-content-wrapper{
-        h2{
+.section.inner-container.news-section {
+    .default-content-wrapper {
+        h2 {
             color: rgb(52, 58, 64);
             font-size: 32px;
             font-weight: 600;
@@ -871,8 +926,8 @@ body::-webkit-scrollbar-track {
     }
 }
 
-.columns.columns.columns-type-d{
-    & > div{
+.columns.columns-type-d {
+    &>div {
         border-radius: 7.088px;
         border: 1px solid rgba(0, 0, 0, 0.10);
         background: linear-gradient(119deg, #FFF 0%, #E8E8E8 100%);
@@ -880,24 +935,34 @@ body::-webkit-scrollbar-track {
         padding: 15px !important;
         max-width: 868px;
         margin: 15px auto 0 auto;
+
+        @media (width<=900px) {
+            .columns-img-col {
+                display: none;
+            }
+        }
     }
-    h2{
+
+    h2 {
         font-size: 20px;
         color: #5B6471;
         font-weight: 600;
         line-height: normal;
     }
-    p{
+
+    p {
         color: #8A93A0 !important;
         margin: 0;
         padding: 0;
         margin-top: 10px;
     }
-    h3{
+
+    h3 {
         color: #5B6471;
         font-size: 12px;
     }
-    .columns-img-col{
+
+    .columns-img-col {
         flex: 0 0 156px;
         margin-left: 24px;
     }
