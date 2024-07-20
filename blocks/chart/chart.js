@@ -44,7 +44,7 @@ console.log(graphData);
     
 
     var options = {
-        title: 'Monthly Data',
+        title: 'Stock Data',
         hAxis: {title: 'Time',  titleTextStyle: {color: '#333'}},
         vAxis: {minValue: 59.0},
         tooltip: {trigger: 'hover'}
