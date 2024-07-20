@@ -28,7 +28,7 @@ function drawChart() {
         graphData.addColumn('string', 'Time');
         graphData.addColumn('number', 'Open');
         graphData.addRows(dataArray);
-    fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=HDB&interval=15min&apikey=6XU1CKCJQ47LEPDM")
+    /*fetch("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=HDB&interval=15min&apikey=6XU1CKCJQ47LEPDM")
         .then(response => response.json())  
         .then(data => {
             const timeSeries = data['Time Series (15min)'];
@@ -39,7 +39,7 @@ function drawChart() {
               
         })
         .catch(error => console.error('Error fetching JSON data:', error));
-console.log(graphData);
+console.log(graphData);*/
         
     
 
