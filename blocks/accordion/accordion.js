@@ -14,15 +14,21 @@ export default function decorate(block) {
     const label = row.children[0];
     const summary = document.createElement('summary');
     summary.className = 'accordion-item-label';
+    summary.setAttribute('itemscope', '');
+    summary.setAttribute('itemprop', 'mainEntity');
+    summary.setAttribute('itemtype', 'https://schema.org/Question');
     summary.append(...label.childNodes);
     if (!hasWrapper(summary)) {
-      summary.innerHTML = `<p>${summary.innerHTML}</p>`;
+      summary.innerHTML = `<p itemprop="name">${summary.innerHTML}</p>`;
     }
     // decorate accordion item body
     const body = row.children[1];
     body.className = 'accordion-item-body';
+    body.setAttribute('itemscope', '');
+    body.setAttribute('itemprop', 'acceptedAnswer');
+    body.setAttribute('itemtype', 'https://schema.org/Answer');
     if (!hasWrapper(body)) {
-      body.innerHTML = `<p>${body.innerHTML}</p>`;
+      body.innerHTML = `<p itemprop="text">${body.innerHTML}</p>`;
     }
     // decorate accordion item
     const details = document.createElement('details');

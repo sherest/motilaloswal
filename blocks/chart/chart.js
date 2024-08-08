@@ -1,5 +1,5 @@
 
-export default function decorate(block) {
+export default async function decorate(block) {
     const chartDiv = document.querySelector('.chart-wrapper .chart');
     const childOfChild = chartDiv.querySelector('div > div');
     childOfChild.id = 'chart_div';
@@ -7,19 +7,21 @@ export default function decorate(block) {
     childOfChild.style.height = '500px';
 }
 let timeSeries = [];
-fetch("https://mocki.io/v1/e235115a-d22b-4773-96e3-1bdf2554cec5")
-    .then(response => response.json())
+const res = await fetch("https://mocki.io/v1/e235115a-d22b-4773-96e3-1bdf2554cec5");
+const data = await res.json();
+timeSeries = data['Time Series (15min)'];
+    /*.then(response => response.json())
     .then(data => {
         timeSeries = data['Time Series (15min)'];
 
     })
-    .catch(error => console.error('Error fetching JSON data:', error));
+    .catch(error => console.error('Error fetching JSON data:', error));*/
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
 
 function drawChart() {
-    setTimeout(function () {
+    //setTimeout(function () {
         var graphData = new google.visualization.DataTable();
         graphData.addColumn('string', 'Time');
         graphData.addColumn('number', 'Open');
@@ -41,6 +43,6 @@ function drawChart() {
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(graphData, options);
-    }, 100);
+   // }, 100);
 
 }

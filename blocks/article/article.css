@@ -1,0 +1,38 @@
+.article {
+    h2 {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0;
+        line-height: normal;
+    }
+
+    p {
+        font-size: 16px;
+        color: #8A93A0;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    a {
+        color: #f8af0d !important;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    li {
+        font-size: 16px;
+        color: #8A93A0;
+        margin-bottom: 10px;
+
+        marker {
+            font-size: 16px;
+            color: #8A93A0;
+        }
+
+        ;
+    }
+
+    strong {
+        color: #454B54 !important
+    }
+}
