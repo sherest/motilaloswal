@@ -9,7 +9,11 @@ export default async function decorate(block) {
     return;
   }
   const records = await response.json();
-  const initCards = records.data.slice(0, 8); // Grab the first 8 items in list
+  let metaTag = document.querySelector('meta[property="article:tag"]');
+  let content = metaTag ? metaTag.getAttribute('content') : 'Meta tag not found';
+  console.log(content);
+  const initCards = records.data.filter(item => item.tag === content);
+  //let filteredData = initCards.filter(item => item.tag === "swp"); // Grab the first 8 items in list
   const cards = [];
   let activeIndex = 0;
 
