@@ -7,7 +7,7 @@ export default async function decorate(block) {
     childOfChild.style.height = '500px';
 }
 let timeSeries = [];
-const res = await fetch("https://mocki.io/v1/ce843df0-ddea-498d-a2c4-ce63f2a1cab1");
+const res = await fetch("https://mocki.io/v1/b246de86-b9b5-47e0-9845-daa6de90a3a5");
 const data = await res.json();
 timeSeries = data['Time Series (15min)'];
     /*.then(response => response.json())
