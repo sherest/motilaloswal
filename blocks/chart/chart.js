@@ -1,27 +1,29 @@
 
 export default async function decorate(block) {
-    const chartDiv = document.querySelector('.chart-wrapper .chart');
-    const childOfChild = chartDiv.querySelector('div > div');
-    childOfChild.id = 'chart_div';
-    childOfChild.style.width = '100%';
-    childOfChild.style.height = '500px';
-}
-let timeSeries = [];
-const res = await fetch("https://mocki.io/v1/b246de86-b9b5-47e0-9845-daa6de90a3a5");
-const data = await res.json();
-timeSeries = data['Time Series (15min)'];
+    const child = block.querySelector('div > div');
+    const id = 'chart_div' + Math.random();
+    const anchorTag = block.querySelector('a');
+    const hrefValue = anchorTag.getAttribute('href');
+    child.id = id;
+    child.style.width = '100%';
+    child.style.height = '500px';
+
+    let timeSeries = [];
+    const res = await fetch(hrefValue);
+    const data = await res.json();
+    timeSeries = data['Time Series (15min)'];
     /*.then(response => response.json())
     .then(data => {
         timeSeries = data['Time Series (15min)'];
 
     })
     .catch(error => console.error('Error fetching JSON data:', error));*/
-google.charts.load('current', { 'packages': ['corechart'] });
-google.charts.setOnLoadCallback(drawChart);
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
 
-function drawChart() {
-    //setTimeout(function () {
+    function drawChart() {
+        //setTimeout(function () {
         var graphData = new google.visualization.DataTable();
         graphData.addColumn('string', 'Time');
         graphData.addColumn('number', 'Open');
@@ -32,7 +34,7 @@ function drawChart() {
             if (minVal > value) minVal = value;
             graphData.addRow([key.substring(11, key.length - 3).toString(), value]);
         });
-        
+
         minVal = Math.floor(minVal);
         var options = {
             title: 'HDFC BANK',
@@ -41,8 +43,9 @@ function drawChart() {
             tooltip: { trigger: 'hover' }
         };
 
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.AreaChart(document.getElementById(id));
         chart.draw(graphData, options);
-   // }, 100);
+        // }, 100);
 
+    }
 }
